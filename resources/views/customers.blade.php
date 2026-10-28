@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-
     <nav>
         <a href="/">Laravel POS</a>
         <a href="/about">About</a>
@@ -17,7 +16,6 @@
     </nav>
 
     <main class="container">
-
         <h1>Customer Accounts</h1>
         <p>View and manage customer account information.</p>
 
@@ -37,18 +35,16 @@
                     <tbody>
                         @foreach ($customers as $customer)
                             <tr>
-                                <td>{{ $customer['id'] }}</td>
-                                <td>{{ $customer['name'] }}</td>
-                                <td>{{ $customer['email'] }}</td>
-                                <td>{{ $customer['phone'] }}</td>
+                                <td>{{ $customer->id }}</td>
+                                <td>{{ $customer->full_name }}</td>
+                                <td>{{ $customer->email }}</td>
+                                <td>{{ $customer->phone }}</td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
         </div>
-
     </main>
-
 </body>
 </html>
